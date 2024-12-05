@@ -1,0 +1,155 @@
+/* Global.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0e112b;
+    color: #ffffff;
+    overflow: hidden; /* Nasconde lo scroll predefinito */
+}
+
+/* Stili Globali */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6ec7;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+button:focus {
+    outline: none;
+}
+
+section {
+    padding: 50px 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* App Container */
+.app {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sections */
+.sections {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide Selection */
+.slide-selection {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.slide-selection div {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #b0b0b0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.slide-selection div:hover {
+    transform: scale(1.2);
+}
+
+.slide-selection div.active {
+    background: #ff6ec7;
+    transform: scale(1.2);
+}
+
+/* Sezione Generica */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    max-width: 800px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .nav ul {
+        gap: 20px;
+    }
+}

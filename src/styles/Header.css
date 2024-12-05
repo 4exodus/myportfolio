@@ -1,0 +1,51 @@
+/* Header.css */
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(14, 17, 43, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    font-size: 1rem;
+    color: #f8f8f8;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav li:hover {
+    color: #ff6ec7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .nav ul {
+        gap: 20px;
+    }
+}

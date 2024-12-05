@@ -1,0 +1,182 @@
+/* src/styles/Projects.css */
+
+.projects {
+  padding: 100px 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.projects p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 50px;
+  padding-top: 10px; /* Aggiunge ulteriore spazio sopra lo slider */
+}
+
+.slider-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  z-index: 1;
+}
+
+/* Fade-in al viewport */
+.slider-container.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Effetto sfumatura ai margini */
+.slider-container::before,
+.slider-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #0e112b 0%, transparent 100%);
+}
+
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #0e112b 0%, transparent 100%);
+}
+
+/* Wrapper per ogni slide */
+.project-card-wrapper {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stilizza le card */
+.project-card {
+  background-color: #1c1f3a;
+  border-radius: 15px;
+  overflow: visible;
+  width: 430px;
+  height: 480px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Card al centro più grande */
+.slick-center .project-card {
+  transform: scale(1.12);
+  box-shadow: 0 15px 15px rgba(0,0,0,0.5);
+  z-index: 3;
+}
+
+/* Card ai lati più piccole, sfumate e blurrate */
+.slick-slide:not(.slick-center) .project-card {
+  transform: scale(0.9);
+  filter: blur(2px);
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+/* Hover sulla card centrale (solo quella completamente visibile) 
+.slick-center .project-card:hover {
+  transform: scale(1.15) translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}*/
+
+/* Immagine */
+.project-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Contenuto della card */
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin-bottom: 15px;
+}
+
+.project-technologies {
+  margin-bottom: 15px;
+}
+
+.tech-badge {
+  display: inline-block;
+  background-color: #0e112b;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.project-links a {
+  display: inline-block;
+  color: #ff6ec7;
+  margin-right: 15px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #007cf0;
+}
+
+.project-links a svg {
+  margin-right: 5px;
+}
+
+/* Dots dello slider */
+.slick-dots li button:before {
+  color: none;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff6ec7;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+  .projects {
+    padding: 80px 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.slick-slider {
+  padding: 30px; /* Aggiunge spazio sopra e sotto allo slider */
+  overflow: clip !important; 
+}
+
+.slick-list {
+  overflow: visible !important; 
+}

@@ -1,0 +1,203 @@
+/* Hero.css */
+
+/* Hero Section */
+
+.hero {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+    height: 100vh; /* Assicura che la sezione occupi l'intera altezza dello schermo */
+}
+
+.hero .text {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Allinea verticalmente il contenuto */
+    /*height: 100%; */
+}
+
+
+.hero .image {
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 1.2;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero .highlight {
+    background: linear-gradient(90deg, #ff6ec7, #007cf0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Buttons */
+.hero .buttons {
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.hero .btn {
+    position: relative;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 30px 0px 30px; 
+    overflow: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
+
+}
+
+.hero .btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: width 0.7s ease-in-out;
+}
+
+.hero .btn:hover::after {
+    width: 100%;
+}
+
+.hero .btn.primary {
+    background: linear-gradient(90deg, #ff6ec7, #007cf0);
+    color: #ffffff;
+}
+
+.hero .btn.primary:hover {
+    opacity: 0.9;
+}
+
+.hero .btn.secondary {
+    background: transparent;
+    border-color: #ff6ec7;
+    color: #ff6ec7;
+}
+
+.hero .btn.secondary:hover {
+    background: linear-gradient(90deg, #ff6ec7, #007cf0);
+    color: #ffffff;
+    border-color: transparent ;
+}
+
+
+/* Icone per i social */
+.hero .social-icons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.hero .social-icons a {
+    color: #b0b0b0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .social-icons a:hover {
+    color: #ff6ec7;
+    transform: translateY(-5px);
+}
+
+/* Effetto Floating sull'Immagine */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Movimento leggero verso l'alto */
+    }
+}
+
+.hero .image {
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero .image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px 0 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .hero .text,
+    .hero .image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero .image {
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .hero .text {
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
