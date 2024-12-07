@@ -10,7 +10,7 @@
     align-items: center;
     padding: 0 50px;
     position: relative;
-    height: 100vh; /* Assicura che la sezione occupi l'intera altezza dello schermo */
+    height: 100vh; 
 }
 
 .hero .text {
@@ -19,7 +19,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Allinea verticalmente il contenuto */
+    justify-content: center; 
     /*height: 100%; */
 }
 
@@ -179,25 +179,78 @@
     .hero {
         flex-direction: column-reverse;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 15px; 
     }
 
     .hero .text,
     .hero .image {
-        max-width: 100%;
+        max-width: 90%; 
         height: auto;
     }
 
     .hero .image {
-        margin-bottom: 30px;
-        margin-top: 0;
+        margin-bottom: 20px; 
+        margin-top: 15%;
     }
 
     .hero .text {
         align-items: center;
+        text-align: center; 
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;    
+    }
+
+    .hero p {
+        font-size: 1rem; 
+        line-height: 1.5;
+        color: #d0d0d0; 
+    }
+
+    .hero .buttons {
+        flex-direction: column;
+        gap: 10px; 
+        width: 100%; 
+    }
+
+    .hero .btn {
+        font-size: 0.9rem; 
+        padding: 10px 20px; 
+    }
+
+    .hero .image img {
+        max-width: 100%; 
+    }
+}
+
+
+
+@media (max-width: 1920px) {
+    .hero {
+        padding: 0 40px;
+    }
+
+    .hero .image img {
+        max-width: 80%; 
+        height: auto;
+        max-height: 90vh; 
+        object-fit: cover; 
+    }
+
+    .hero h1 {
+        font-size: 3rem; 
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero .text {
+        max-width: 60%;
+    }
+
+    .hero .buttons {
+        gap: 15px;
     }
 }

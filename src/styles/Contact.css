@@ -2,89 +2,129 @@
 
 /* Sezione Contact */
 .contact {
-    padding: 100px 50px;
-    color: #ffffff;
-    text-align: center;
+  padding: 100px 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Elementi di Contatto */
+.contact-item {
+  background-color: #1c1f3a;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact-item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(0.2s * var(--i));
+}
+
+.contact-item:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+
+.contact-icon {
+  font-size: 3rem;
+  color: #ff6ec7;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+.contact-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+.contact-item a {
+  color: #ff6ec7;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design per dispositivi mobili */
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 20px; /* Riduce padding */
   }
-  
-  .contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .contact p {
-    font-size: 1.2rem;
-    color: #b0b0b0;
-    margin-bottom: 50px;
-  }
-  
+
   .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid; /* Cambia da Flexbox a Grid */
+    grid-template-columns: 1fr 1fr; /* Due colonne uguali */
+    gap: 20px; /* Riduce lo spazio tra le card */
+    padding: 0; /* Rimuove padding aggiuntivo */
+    overflow: hidden; /* Disabilita lo scorrimento orizzontale */
+    grid-auto-flow: row; /* Ordina per riga */
   }
-  
+
   .contact-item {
-    background-color: #1c1f3a;
-    border-radius: 15px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    padding: 15px; /* Riduce il padding interno */
+    width: 100%; /* Assicura che le card occupino lo spazio della grid */
+    max-width: none; /* Rimuove il limite di larghezza */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza */
+    display: flex; /* Aggiunto per Flexbox */
+    flex-direction: column; /* Disposizione verticale */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    text-align: center; /* Assicura che il testo sia centrato */
   }
-  
-  .contact-item.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: calc(0.2s * var(--i));
-  }
-  
-  .contact-item:hover {
-    transform: translateY(-10px);
-    transition: transform 0.3s ease;
-  }
-  
+
   .contact-icon {
-    font-size: 3rem;
-    color: #ff6ec7;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-  }
-  
-  .contact-icon:hover {
-    transform: scale(1.1);
-  }
-  
-  .contact-item h3 {
-    font-size: 1.5rem;
+    font-size: 2.5rem; /* Riduce le icone */
     margin-bottom: 10px;
   }
-  
+
+  .contact-item h3 {
+    text-align: center;
+    font-size: 1.1rem; /* Riduce il titolo della competenza */
+    margin-bottom: 10px;
+  }
+
   .contact-item p {
-    font-size: 1rem;
-    color: #b0b0b0;
+    font-size: 0rem; /* Riduce leggermente il testo */
   }
-  
-  .contact-item a {
-    color: #ff6ec7;
-    text-decoration: none;
-  }
-  
-  .contact-item a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .contact {
-      padding: 80px 20px;
-    }
-  
-    .contact-item {
-      width: 100%;
-      max-width: 400px;
-    }
-  }
-  
+
+  /* Assegnazione delle posizioni specifiche per ottenere l'ordine desiderato */
+  .contact-item:nth-child(1) { grid-row: 1; grid-column: 1; }
+  .contact-item:nth-child(2) { grid-row: 2; grid-column: 1; }
+  .contact-item:nth-child(3) { grid-row: 3; grid-column: 1; }
+  .contact-item:nth-child(4) { grid-row: 1; grid-column: 2; }
+  .contact-item:nth-child(5) { grid-row: 2; grid-column: 2; }
+  .contact-item:nth-child(6) { grid-row: 3; grid-column: 2; }
+}
+

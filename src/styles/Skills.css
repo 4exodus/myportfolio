@@ -29,7 +29,7 @@
   background-color: #0e112b;
   padding: 30px;
   border-radius: 15px;
-  width: 200px;
+  width: 200px; /* Larghezza fissa per desktop */
   text-align: center;
   opacity: 0;
   transform: translateY(50px);
@@ -80,19 +80,63 @@
   transition: width 2s ease-in-out;
 }
 
-/* Responsive Design */
+/* Responsive Design per dispositivi mobili */
 @media (max-width: 768px) {
   .skills {
-    padding: 80px 20px;
+    padding: 50px 15px; /* Riduce padding */
+    text-align: center; /* Centra il contenuto */
   }
 
+  .skills h2 {
+    font-size: 2rem; /* Riduce il titolo */
+  }
+
+  .skills p {
+    font-size: 1rem; /* Riduce il testo descrittivo */
+    margin-bottom: 30px;
+  }
+
+  /* Utilizzo di CSS Grid per due colonne su mobile */
   .skills-container {
-    flex-direction: column;
-    align-items: center;
+    display: grid; /* Cambia da Flexbox a Grid */
+    grid-template-columns: 1fr 1fr; /* Due colonne uguali */
+    gap: 20px; /* Riduce lo spazio tra le card */
+    padding: 0; /* Rimuove padding aggiuntivo */
+    overflow: hidden; /* Disabilita lo scorrimento orizzontale */
   }
 
   .skill-card {
-    width: 100%;
-    max-width: 300px;
+    padding: 20px; /* Riduce il padding interno */
+    width: 100%; /* Assicura che le card occupino lo spazio della grid */
+    max-width: none; /* Rimuove il limite di larghezza */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza */
   }
+
+  .skill-icon {
+    font-size: 2.5rem; /* Riduce le icone */
+    margin-bottom: 10px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.2rem; /* Riduce il titolo della competenza */
+    margin-bottom: 10px;
+  }
+
+  .skill-bar {
+    height: 8px; /* Barre più sottili */
+  }
+
+  .skill-level {
+    transition: width 1.5s ease-in-out; /* Velocità di animazione più rapida */
+  }
+
+  /* Assegnazione delle posizioni specifiche per ottenere l'ordine desiderato */
+  .skill-card:nth-child(1) { grid-row: 1; grid-column: 1; }
+  .skill-card:nth-child(2) { grid-row: 2; grid-column: 1; }
+  .skill-card:nth-child(3) { grid-row: 3; grid-column: 1; }
+  .skill-card:nth-child(4) { grid-row: 4; grid-column: 1; }
+  .skill-card:nth-child(5) { grid-row: 1; grid-column: 2; }
+  .skill-card:nth-child(6) { grid-row: 2; grid-column: 2; }
+  .skill-card:nth-child(7) { grid-row: 3; grid-column: 2; }
+  .skill-card:nth-child(8) { grid-row: 4; grid-column: 2; }
 }

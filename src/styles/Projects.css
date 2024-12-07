@@ -20,7 +20,7 @@
 
 .slider-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: none;
   position: relative;
   opacity: 0;
   transform: scale(0.95);
@@ -67,20 +67,27 @@
 .project-card {
   background-color: #1c1f3a;
   border-radius: 15px;
-  overflow: visible;
-  width: 430px;
-  height: 480px;
+  overflow: hidden; /* Modificato da visible a hidden per evitare overflow */
+  width: 100%;
+  max-width: 430px; /* Limita la larghezza massima */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 1;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto; /* Rende l'altezza dell'immagine automatica */
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
 }
 
 /* Card al centro più grande */
 .slick-center .project-card {
   transform: scale(1.12);
-  box-shadow: 0 15px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
   z-index: 3;
 }
 
@@ -92,22 +99,13 @@
   box-shadow: none;
 }
 
-/* Hover sulla card centrale (solo quella completamente visibile) 
-.slick-center .project-card:hover {
-  transform: scale(1.15) translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-}*/
-
-/* Immagine */
-.project-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
 /* Contenuto della card */
 .project-content {
   padding: 20px;
+  display: flex; /* Aggiunto per Flexbox */
+  flex-direction: column; /* Disposizione verticale */
+  align-items: center; /* Centra gli elementi orizzontalmente */
+  text-align: center; /* Assicura che il testo sia centrato */
 }
 
 .project-content h3 {
@@ -153,30 +151,122 @@
 
 /* Dots dello slider */
 .slick-dots li button:before {
-  color: none;
+  color: #b0b0b0; /* Colore dei dots non attivi */
 }
 
 .slick-dots li.slick-active button:before {
-  color: #ff6ec7;
+  color: #ff6ec7; /* Colore del dot attivo */
 }
 
 /* Responsività */
 @media (max-width: 768px) {
   .projects {
-    padding: 80px 20px;
+    padding: 80px 20px; /* Riduce padding */
+  }
+
+  .slider-container {
+    max-width: 100%; /* Rimuove il limite di larghezza */
+    padding: 0; /* Rimuove padding aggiuntivo */
+    overflow: hidden; /* Disabilita lo scorrimento orizzontale */
+    grid-auto-flow: row; /* Ordina per riga */
+  }
+
+  .project-card-wrapper {
+    /* Nessuna modifica necessaria */
   }
 
   .project-card {
+    padding: 15px; /* Riduce il padding interno */
+    max-width: 100%; /* Rimuove il limite di larghezza */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza */
+    display: flex; /* Aggiunto per Flexbox */
+    flex-direction: column; /* Disposizione verticale */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    text-align: center; /* Assicura che il testo sia centrato */
+    width: 100%; /* Assicura che le card occupino lo spazio della grid */
+    height: auto; /* Rimuove altezza fissa */
+  }
+
+  .project-image img {
+    height: auto; /* Rende l'altezza automatica per immagini */
+    border-radius: 15px 15px 0 0;
+  }
+
+  .project-content {
+    padding: 15px; /* Riduce il padding interno */
+  }
+
+  .project-content h3 {
+    font-size: 1.1rem; /* Riduce il titolo della competenza */
+    margin-bottom: 10px;
+  }
+
+  .project-content p {
+    font-size: 0.9rem; /* Riduce leggermente il testo */
+    margin-bottom: 10px;
+  }
+
+  .tech-badge {
+    font-size: 0.8rem; /* Riduce leggermente la dimensione del badge */
+    padding: 4px 8px; /* Riduce il padding */
+  }
+
+  .project-links a {
+    font-size: 0.9rem; /* Riduce leggermente la dimensione del testo */
+    margin-right: 10px; /* Riduce lo spazio tra i link */
+  }
+
+  /* Assegnazione delle posizioni specifiche per ottenere l'ordine desiderato */
+  /* Non necessario con react-slick, ma se usi grid, puoi mantenere */
+  /* Potresti rimuovere queste regole se non servono */
+}
+
+/* Ulteriore Ottimizzazione per Dispositivi più piccoli di 1920x1080 */
+@media (max-width: 1920px) and (min-width: 769px) {
+  .project-card {
+    max-width: 400px; /* Riduce leggermente la larghezza */
+    padding: 20px; /* Aggiusta il padding se necessario */
+  }
+
+  .project-card img {
     width: 100%;
-    max-width: 400px;
+    height: 10vh; /* Rende l'altezza dell'immagine automatica */
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .project-content h3 {
+    font-size: 1.5rem; /* Riduce leggermente il titolo */
+  }
+
+  .project-content p {
+    font-size: 1rem; /* Mantiene leggibile il testo */
+  }
+
+  .tech-badge {
+    font-size: 0.85rem; /* Regola la dimensione dei badge */
+    padding: 5px 9px; /* Regola il padding */
+  }
+
+  .project-links a {
+    font-size: 0.95rem; /* Regola la dimensione del testo */
+    margin-right: 12px; /* Regola lo spazio tra i link */
   }
 }
 
 .slick-slider {
-  padding: 30px; /* Aggiunge spazio sopra e sotto allo slider */
+  padding: 25px; /* Aggiunge spazio sopra e sotto allo slider */
   overflow: clip !important; 
 }
 
 .slick-list {
   overflow: visible !important; 
+}
+
+
+@media (max-width: 780px) {
+  .project-card img {
+    max-height: auto;
+    border-radius: 15px 15px 0 0;
+  }
 }

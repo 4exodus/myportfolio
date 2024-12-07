@@ -14,12 +14,14 @@ header {
     padding: 20px 50px;
 }
 
+/* Logo */
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #ffffff;
 }
 
+/* Navigation */
 .nav ul {
     display: flex;
     list-style: none;
@@ -39,13 +41,55 @@ header {
     color: #ff6ec7;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
+/* Hamburger Button */
+.hamburger {
+    display: none; /* Nasconde l'icona su dispositivi grandi */
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 1001;
+  }
 
-    .nav ul {
-        gap: 20px;
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: none; /* Mostra l'icona hamburger su dispositivi mobili */
     }
-}
+  
+    .nav ul {
+      display: none; /* Nasconde il menu di default */
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Sotto l'header */
+      left: 0;
+      width: 100%;
+      background: rgba(14, 17, 43, 0.9);
+      border-radius: 10px;
+      padding: 20px 0;
+      list-style: none;
+      text-align: center;
+    }
+  
+    header.nav-open .nav ul {
+      display: flex; /* Mostra il menu quando l'hamburger è cliccato */
+    }
+  
+    .nav li {
+        display: none;
+      padding: 10px 0;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+  
+    .nav li:hover {
+      color: #ff6ec7;
+    }
+  }
+  
+  .logo{
+    display: none;
+  }
+ 
+  header{
+    display: none;
+  }
