@@ -83,43 +83,43 @@
 /* Responsive Design per dispositivi mobili */
 @media (max-width: 768px) {
   .skills {
-    padding: 0px 15px; /* Riduce padding */
-    text-align: center; /* Centra il contenuto */
+    padding: 0px 15px; 
+    text-align: center; 
   }
 
   .skills h2 {
-    font-size: 2rem; /* Riduce il titolo */
+    font-size: 2rem; 
   }
 
   .skills p {
-    font-size: 0rem; /* Riduce il testo descrittivo */
+    font-size: 0rem; 
     margin-bottom: 10px;
   }
 
   /* Utilizzo di CSS Grid per due colonne su mobile */
   .skills-container {
-    display: grid; /* Cambia da Flexbox a Grid */
-    grid-template-columns: 1fr 1fr; /* Due colonne uguali */
-    gap: auto; /* Riduce lo spazio tra le card */
-    padding: 0; /* Rimuove padding aggiuntivo */
-    overflow: hidden; /* Disabilita lo scorrimento orizzontale */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: auto; 
+    padding: 0; 
+    overflow: hidden; 
   }
 
   .skill-card {
-    padding: 20px; /* Riduce il padding interno */
+    padding: 20px; 
     height: 110px;
-    width: 100%; /* Assicura che le card occupino lo spazio della grid */
-    max-width: none; /* Rimuove il limite di larghezza */
-    box-sizing: border-box; /* Include padding e bordi nella larghezza */
+    width: 100%; 
+    max-width: none; 
+    box-sizing: border-box; 
   }
 
   .skill-icon {
-    font-size: 2rem; /* Riduce le icone */
+    font-size: 2rem; 
     margin-bottom: 0px;
   }
 
   .skill-card h3 {
-    font-size: .9rem; /* Riduce il titolo della competenza */
+    font-size: .9rem; 
     margin-bottom: 5px;
   }
 
@@ -131,7 +131,7 @@
     transition: width 1.5s ease-in-out; /* Velocità di animazione più rapida */
   }
 
-  /* Assegnazione delle posizioni specifiche per ottenere l'ordine desiderato */
+  /* Assegnazione delle posizioni specifiche  */
   .skill-card:nth-child(1) { grid-row: 1; grid-column: 1; }
   .skill-card:nth-child(2) { grid-row: 2; grid-column: 1; }
   .skill-card:nth-child(3) { grid-row: 3; grid-column: 1; }
