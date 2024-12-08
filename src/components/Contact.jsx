@@ -13,7 +13,7 @@ const Contact = () => {
       content: (
         <a href="mailto:giodevfe@proton.me">giodevfe@proton.me</a>
       ),
-      href: 'mailto:giodevfe@proton.me', // Aggiunto campo href
+      href: 'mailto:giodevfe@proton.me', 
     },
     {
       icon: <FaGithub className="contact-icon" />,
@@ -23,7 +23,7 @@ const Contact = () => {
           github.com/4exodus
         </a>
       ),
-      href: 'https://github.com/4exodus', // Aggiunto campo href
+      href: 'https://github.com/4exodus',
     },
     {
       icon: <FaInstagram className="contact-icon" />,
@@ -33,7 +33,7 @@ const Contact = () => {
           @giovanni.iorio00
         </a>
       ),
-      href: 'https://instagram.com/giovanni.iorio00', // Aggiunto campo href
+      href: 'https://instagram.com/giovanni.iorio00',
     },
     {
       icon: <FaLinkedin className="contact-icon" />,
@@ -43,13 +43,13 @@ const Contact = () => {
           linkedin.com/in/giovanni-iorio
         </a>
       ),
-      href: 'https://it.linkedin.com/in/giovanni-iorio-88718a302', // Aggiunto campo href
+      href: 'https://it.linkedin.com/in/giovanni-iorio-88718a302', 
     },
     {
       icon: <FaMapMarkerAlt className="contact-icon" />,
       title: 'Posizione',
       content: 'Foggia, Puglia, 71121',
-      href: null, // Nessun link
+      href: 'https://maps.app.goo.gl/UCPPRWYc5rEVuiN57', 
     },
     {
       icon: <FaJournalWhills className="contact-icon" />,
@@ -82,7 +82,7 @@ const Contact = () => {
             </div>
           );
 
-          // Se href esiste, avvolgi la card in un <a>, altrimenti in un <div>
+        
           return item.href ? (
             <a href={item.href} target="_blank" rel="noopener noreferrer" key={index} style={{ textDecoration: 'none' }}>
               {CardContent}
