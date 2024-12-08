@@ -88,7 +88,18 @@
   
   @media (max-width: 768px) {
     .testimonials {
-      padding: 80px 20px;
+      padding: 0px 20px;
+    }
+
+    .testimonials p {
+      font-size: 0px;
+      margin-bottom: 30px;
+    }
+
+    .testimonials h2 {
+      margin-top: auto;
+      margin-bottom: 70px;
+      position:relative;
     }
   
     .testimonial-card {

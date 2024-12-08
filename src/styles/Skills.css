@@ -83,7 +83,7 @@
 /* Responsive Design per dispositivi mobili */
 @media (max-width: 768px) {
   .skills {
-    padding: 50px 15px; /* Riduce padding */
+    padding: 0px 15px; /* Riduce padding */
     text-align: center; /* Centra il contenuto */
   }
 
@@ -92,8 +92,8 @@
   }
 
   .skills p {
-    font-size: 1rem; /* Riduce il testo descrittivo */
-    margin-bottom: 30px;
+    font-size: 0rem; /* Riduce il testo descrittivo */
+    margin-bottom: 10px;
   }
 
   /* Utilizzo di CSS Grid per due colonne su mobile */

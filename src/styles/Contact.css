@@ -81,7 +81,7 @@
 /* Responsive Design per dispositivi mobili */
 @media (max-width: 768px) {
   .contact {
-    padding: 80px 20px; /* Riduce padding */
+    padding: 0px 20px; /* Riduce padding */
   }
 
   .contact-container {
@@ -128,3 +128,11 @@
   .contact-item:nth-child(6) { grid-row: 3; grid-column: 2; }
 }
 
+.contact p{
+  font-size: 0px;
+  margin-bottom: 0px;
+}
+
+.contact h2{
+  margin-bottom: 70px;
+}

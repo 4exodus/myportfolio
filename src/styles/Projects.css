@@ -161,7 +161,7 @@
 /* Responsività */
 @media (max-width: 768px) {
   .projects {
-    padding: 80px 20px; /* Riduce padding */
+    padding: 0px 20px; /* Riduce padding */
   }
 
   .slider-container {
@@ -264,9 +264,72 @@
 }
 
 
+/* Responsività per schermi <= 780px */
 @media (max-width: 780px) {
-  .project-card img {
-    max-height: auto;
+  .project-card {
+    width: 280px; /* Larghezza fissa */
+    height: 400px; /* Altezza fissa */
+    padding: 10px; /* Padding ridotto per adattarsi alla nuova altezza */
+    box-sizing: border-box; /* Include padding e bordi nella larghezza e altezza */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  /* Gestione del contenitore dell'immagine */
+  .project-image {
+    width: 100%;
+    height: 120px; /* Altezza ridotta per adattarsi alla card */
     border-radius: 15px 15px 0 0;
+  }
+
+  /* Immagine all'interno del contenitore */
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .project-content {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .project-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limita a 3 linee */
+    -webkit-box-orient: vertical;
+  }
+
+  .tech-badge {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .project-links a {
+    font-size: 0.9rem;
+    margin-right: 10px;
+  }
+
+  .projects p {
+    font-size: 0px;
+    margin-bottom: 10px;
   }
 }
