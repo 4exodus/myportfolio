@@ -102,10 +102,10 @@
 /* Contenuto della card */
 .project-content {
   padding: 20px;
-  display: flex; /* Aggiunto per Flexbox */
-  flex-direction: column; /* Disposizione verticale */
-  align-items: center; /* Centra gli elementi orizzontalmente */
-  text-align: center; /* Assicura che il testo sia centrato */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
 }
 
 .project-content h3 {
@@ -161,71 +161,67 @@
 /* Responsività */
 @media (max-width: 768px) {
   .projects {
-    padding: 0px 20px; /* Riduce padding */
+    padding: 0px 20px; 
   }
 
   .slider-container {
-    max-width: 100%; /* Rimuove il limite di larghezza */
-    padding: 0; /* Rimuove padding aggiuntivo */
-    overflow: hidden; /* Disabilita lo scorrimento orizzontale */
-    grid-auto-flow: row; /* Ordina per riga */
+    max-width: 100%; 
+    padding: 0; 
+    overflow: hidden; 
+    grid-auto-flow: row; 
   }
 
   .project-card-wrapper {
-    /* Nessuna modifica necessaria */
+    /* ? In sospeso */
   }
 
   .project-card {
-    padding: 15px; /* Riduce il padding interno */
+    padding: 15px; 
     max-width: 100%; /* Rimuove il limite di larghezza */
-    box-sizing: border-box; /* Include padding e bordi nella larghezza */
-    display: flex; /* Aggiunto per Flexbox */
-    flex-direction: column; /* Disposizione verticale */
-    align-items: center; /* Centra gli elementi orizzontalmente */
-    text-align: center; /* Assicura che il testo sia centrato */
-    width: 100%; /* Assicura che le card occupino lo spazio della grid */
-    height: auto; /* Rimuove altezza fissa */
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    width: 100%; 
+    height: auto; 
   }
 
   .project-image img {
-    height: auto; /* Rende l'altezza automatica per immagini */
+    height: auto; 
     border-radius: 15px 15px 0 0;
   }
 
   .project-content {
-    padding: 15px; /* Riduce il padding interno */
+    padding: 15px; 
   }
 
   .project-content h3 {
-    font-size: 1.1rem; /* Riduce il titolo della competenza */
+    font-size: 1.1rem; 
     margin-bottom: 10px;
   }
 
   .project-content p {
-    font-size: 0.9rem; /* Riduce leggermente il testo */
+    font-size: 0.9rem; 
     margin-bottom: 10px;
   }
 
   .tech-badge {
-    font-size: 0.8rem; /* Riduce leggermente la dimensione del badge */
-    padding: 4px 8px; /* Riduce il padding */
+    font-size: 0.8rem; 
+    padding: 4px 8px; 
   }
 
   .project-links a {
-    font-size: 0.9rem; /* Riduce leggermente la dimensione del testo */
-    margin-right: 10px; /* Riduce lo spazio tra i link */
+    font-size: 0.9rem; 
+    margin-right: 10px; 
   }
-
-  /* Assegnazione delle posizioni specifiche per ottenere l'ordine desiderato */
-  /* Non necessario con react-slick, ma se usi grid, puoi mantenere */
-  /* Potresti rimuovere queste regole se non servono */
 }
 
 /* Ulteriore Ottimizzazione per Dispositivi più piccoli di 1920x1080 */
 @media (max-width: 1920px) and (min-width: 769px) {
   .project-card {
-    max-width: 400px; /* Riduce leggermente la larghezza */
-    padding: 20px; /* Aggiusta il padding se necessario */
+    max-width: 400px; 
+    padding: 20px; 
   }
 
   .project-card img {
@@ -236,26 +232,26 @@
   }
 
   .project-content h3 {
-    font-size: 1.5rem; /* Riduce leggermente il titolo */
+    font-size: 1.5rem; 
   }
 
   .project-content p {
-    font-size: 1rem; /* Mantiene leggibile il testo */
+    font-size: 1rem; 
   }
 
   .tech-badge {
-    font-size: 0.85rem; /* Regola la dimensione dei badge */
-    padding: 5px 9px; /* Regola il padding */
+    font-size: 0.85rem; 
+    padding: 5px 9px; 
   }
 
   .project-links a {
-    font-size: 0.95rem; /* Regola la dimensione del testo */
-    margin-right: 12px; /* Regola lo spazio tra i link */
+    font-size: 0.95rem; 
+    margin-right: 12px; 
   }
 }
 
 .slick-slider {
-  padding: 25px; /* Aggiunge spazio sopra e sotto allo slider */
+  padding: 25px; 
   overflow: clip !important; 
 }
 
@@ -267,10 +263,10 @@
 /* Responsività per schermi <= 780px */
 @media (max-width: 780px) {
   .project-card {
-    width: 280px; /* Larghezza fissa */
-    height: 400px; /* Altezza fissa */
-    padding: 10px; /* Padding ridotto per adattarsi alla nuova altezza */
-    box-sizing: border-box; /* Include padding e bordi nella larghezza e altezza */
+    width: 280px; 
+    height: 400px; 
+    padding: 10px; 
+    box-sizing: border-box; 
     display: flex;
     flex-direction: column;
     align-items: center;
