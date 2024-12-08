@@ -81,45 +81,45 @@
 /* Responsive Design per dispositivi mobili */
 @media (max-width: 768px) {
   .contact {
-    padding: 0px 20px; /* Riduce padding */
+    padding: 0px 20px;
   }
 
   .contact-container {
-    display: grid; /* Cambia da Flexbox a Grid */
-    grid-template-columns: 1fr 1fr; /* Due colonne uguali */
-    gap: 20px; /* Riduce lo spazio tra le card */
-    padding: 0; /* Rimuove padding aggiuntivo */
-    overflow: hidden; /* Disabilita lo scorrimento orizzontale */
-    grid-auto-flow: row; /* Ordina per riga */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; 
+    padding: 0; 
+    overflow: hidden; 
+    grid-auto-flow: row; 
   }
 
   .contact-item {
-    padding: 15px; /* Riduce il padding interno */
-    width: 100%; /* Assicura che le card occupino lo spazio della grid */
-    max-width: none; /* Rimuove il limite di larghezza */
-    box-sizing: border-box; /* Include padding e bordi nella larghezza */
-    display: flex; /* Aggiunto per Flexbox */
-    flex-direction: column; /* Disposizione verticale */
-    align-items: center; /* Centra gli elementi orizzontalmente */
-    text-align: center; /* Assicura che il testo sia centrato */
+    padding: 15px; 
+    width: 100%; 
+    max-width: none; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
   }
 
   .contact-icon {
-    font-size: 2.5rem; /* Riduce le icone */
+    font-size: 2.5rem; 
     margin-bottom: 10px;
   }
 
   .contact-item h3 {
     text-align: center;
-    font-size: 1.1rem; /* Riduce il titolo della competenza */
+    font-size: 1.1rem; 
     margin-bottom: 10px;
   }
 
   .contact-item p {
-    font-size: 0rem; /* Riduce leggermente il testo */
+    font-size: 0rem; 
   }
 
-  /* Assegnazione delle posizioni specifiche per ottenere l'ordine desiderato */
+  /* Assegnazione delle posizioni specifiche  */
   .contact-item:nth-child(1) { grid-row: 1; grid-column: 1; }
   .contact-item:nth-child(2) { grid-row: 2; grid-column: 1; }
   .contact-item:nth-child(3) { grid-row: 3; grid-column: 1; }
