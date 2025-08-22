@@ -14,6 +14,20 @@ import particellemagnetiche from '../assets/particellemagnetiche.jpg';
 
 const Projects = () => {
   const projectsData = [
+      {
+      title: 'Ricerca Medica',
+      description: 'Tutti i miei lavori basati sulla ricerca medica',
+      image: galacticclock,
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Python', 'React' ],
+      liveDemo: 'https://cmomedicalresearch.netlify.app/',
+      },
+      {
+      title: 'Donquitech',
+      description: 'Un esempio di e-commerce',
+      image: galacticclock,
+      technologies: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'React' ],
+      liveDemo: 'https://donquitech.com/',
+    },
     {
       title: 'Galactic-Clock',
       description: 'Orologio basato su un sistema solare',
@@ -131,3 +145,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
