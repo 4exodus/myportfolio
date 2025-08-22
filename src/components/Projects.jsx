@@ -11,20 +11,22 @@ import musichandler from '../assets/musichandler.jpg';
 import ItalianGame from '../assets/italiangame.jpg';
 import noattraction from '../assets/0attraction.jpg';
 import particellemagnetiche from '../assets/particellemagnetiche.jpg';
+import donquitech from '../assets/donquitech.jpg';
+import ricercamedica from '../assets/ricercamedica.jpg';
 
 const Projects = () => {
   const projectsData = [
       {
       title: 'Ricerca Medica',
       description: 'Tutti i miei lavori basati sulla ricerca medica',
-      image: galacticclock,
+      image: ricercamedica,
       technologies: ['HTML', 'CSS', 'JavaScript', 'Python', 'React' ],
       liveDemo: 'https://cmomedicalresearch.netlify.app/',
       },
       {
       title: 'Donquitech',
       description: 'Un esempio di e-commerce',
-      image: galacticclock,
+      image: donquitech,
       technologies: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'React' ],
       liveDemo: 'https://donquitech.com/',
     },
@@ -145,4 +147,5 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
